@@ -68,4 +68,5 @@ package require openlane 0.9
 ```tcl
 prep -design picorv32a
 ```
+![1](https://github.com/user-attachments/assets/fee1ba32-7096-4dfb-8246-b1eec197669d)
 
