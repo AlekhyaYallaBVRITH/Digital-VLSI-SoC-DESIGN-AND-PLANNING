@@ -10,6 +10,21 @@ Ensure the following tools are installed and properly configured:
 - OpenLANE (cloned and built)
 - SKY130 PDK (via `open_pdks` or `make pdk`)
 ---
+
+### Basic Linux Commands to start lab exercise
+
+cd : opens the particular folder
+
+ls : lists the content of the folder
+
+pwd : shows the present working directory
+
+mkdir : to make a new directory
+
+command --help : shows the complete use that command
+
+clear : clears the terminal screen
+---
 ## 🛠️ Environment Setup for OpenLANE (`picorv32a` Design)
 ## 🛠️ **Working Directory**
 
