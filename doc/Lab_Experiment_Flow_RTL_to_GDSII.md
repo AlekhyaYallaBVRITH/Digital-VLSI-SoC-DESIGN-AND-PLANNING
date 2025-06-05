@@ -131,3 +131,8 @@ You can use this structure to create your lab exercises:
   * Package GDS, LEF, DEF, timing info.
 * **Expected Output:** Complete GDS bundle for submission
 
+Environment Setup
+Working Directory: ~/Desktop/work/tools/openlane_working_dir/openlane
+Design Directory: ~/Desktop/work/tools/openlane_working_dir/openlane/design
+Target Design: picorv32a
+Configuration Priority: Design-specific config.tcl overrides default tool parameters
