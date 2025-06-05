@@ -13,7 +13,7 @@ A 5-day hands-on workshop focused on open-source EDA tools, layout design, cell 
 - [Day 3: Design Library Cell using MAGIC Layout & ngspice Characterization](#day-3-design-library-cell-using-magic-layout--ngspice-characterization)
 - [Day 4: Pre-layout Timing Analysis and Importance of Good Clock Tree](#day-4-pre-layout-timing-analysis-and-importance-of-good-clock-tree)
 - [Day 5: Final Step for RTL2GDS using TritinRoute and OpenSTA](#day-5-final-step-for-rtl2gds-using-tritinroute-and-opensta)
-- [Lab_Experiments_Setup](doc/Lab Experiment Flow RTL to GDSII.md)
+- [Lab_Experiments_Setup](doc/Lab_Experiment_Flow_RTL_to_GDSII.md)
 ---
 
 ## 🗓️ Day 1: Introduction of Open Source EDA OpenLANE and SKY130 PDK
