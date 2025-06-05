@@ -13,7 +13,8 @@ Ensure the following tools are installed and properly configured:
 ## 🛠️ Environment Setup for OpenLANE (`picorv32a` Design)
 
 **Working Directory:**  
-`~/Desktop/work/tools/openlane_working_dir/openlane`
+
+````~/Desktop/work/tools/openlane_working_dir/openlane````
 
 **Design Directory:**  
 `~/Desktop/work/tools/openlane_working_dir/openlane/design/picorv32a`
