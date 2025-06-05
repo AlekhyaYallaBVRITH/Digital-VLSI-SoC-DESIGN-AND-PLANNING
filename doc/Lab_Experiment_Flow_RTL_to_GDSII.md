@@ -70,3 +70,5 @@ prep -design picorv32a
 ```
 ![1](https://github.com/user-attachments/assets/fee1ba32-7096-4dfb-8246-b1eec197669d)
 
+### 🧬 Step 5: runs dir is created in the designs/picorv32a folder
+![2](https://github.com/user-attachments/assets/e7b0e348-85b8-4a2a-bffa-5b899b60f8ba)
