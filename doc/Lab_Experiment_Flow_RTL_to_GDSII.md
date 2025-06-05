@@ -150,3 +150,4 @@ Ensure the following tools are installed and properly configured:
 **Design Directory:**  
 `~/Desktop/work/tools/openlane_working_dir/openlane/design/picorv32a`
 
+**Steps to Initialize OpenLANE:**
