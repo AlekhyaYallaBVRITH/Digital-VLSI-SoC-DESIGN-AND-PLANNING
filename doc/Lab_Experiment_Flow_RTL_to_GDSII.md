@@ -33,8 +33,6 @@ clear : clears the terminal screen
 ~/Desktop/work/tools/openlane_working_dir/openlane/design/picorv32a
 ```
 
----
-
 ## 🎯 **Target Design**
 
 ```text
