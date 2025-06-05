@@ -21,9 +21,10 @@ pwd : shows the present working directory
 
 mkdir : to make a new directory
 
-command --help : shows the complete use that command
+command --help : shows the complete use that command   
 
 clear : clears the terminal screen
+
 ---
 ## 🛠️ Environment Setup for OpenLANE (`picorv32a` Design)
 ## 🛠️ **Working Directory**
