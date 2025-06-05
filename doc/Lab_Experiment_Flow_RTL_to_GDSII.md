@@ -131,8 +131,22 @@ You can use this structure to create your lab exercises:
   * Package GDS, LEF, DEF, timing info.
 * **Expected Output:** Complete GDS bundle for submission
 
-Environment Setup
-Working Directory: ~/Desktop/work/tools/openlane_working_dir/openlane
-Design Directory: ~/Desktop/work/tools/openlane_working_dir/openlane/design
-Target Design: picorv32a
-Configuration Priority: Design-specific config.tcl overrides default tool parameters
+
+### 📦 Prerequisites
+
+Ensure the following tools are installed and properly configured:
+
+- Docker
+- Git
+- Python 3
+- OpenLANE (cloned and built)
+- SKY130 PDK (via `open_pdks` or `make pdk`)
+---
+## 🛠️ Environment Setup for OpenLANE (`picorv32a` Design)
+
+**Working Directory:**  
+`~/Desktop/work/tools/openlane_working_dir/openlane`
+
+**Design Directory:**  
+`~/Desktop/work/tools/openlane_working_dir/openlane/design/picorv32a`
+
