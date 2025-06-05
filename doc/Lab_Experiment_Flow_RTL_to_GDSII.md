@@ -14,7 +14,7 @@ Ensure the following tools are installed and properly configured:
 
 **Working Directory:**  
 ```bash
-~/Desktop/work/tools/openlane_working_dir/openlane
+`~/Desktop/work/tools/openlane_working_dir/openlane`
 ---
 **Design Directory:**
 ```bash 
