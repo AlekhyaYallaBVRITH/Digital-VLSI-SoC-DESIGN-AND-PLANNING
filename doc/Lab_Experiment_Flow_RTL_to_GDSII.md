@@ -14,7 +14,7 @@ Ensure the following tools are installed and properly configured:
 
 **Working Directory:**  
 
-````~/Desktop/work/tools/openlane_working_dir/openlane````
+<pre>```sh ~/Desktop/work/tools/openlane_working_dir/openlane```</pre>
 
 **Design Directory:**  
 `~/Desktop/work/tools/openlane_working_dir/openlane/design/picorv32a`
