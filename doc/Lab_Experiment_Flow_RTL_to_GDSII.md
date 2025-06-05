@@ -13,7 +13,7 @@ Ensure the following tools are installed and properly configured:
 ## 🛠️ Environment Setup for OpenLANE (`picorv32a` Design)
 
 **Working Directory:**  
-
+```bash
 <pre>```sh ~/Desktop/work/tools/openlane_working_dir/openlane```</pre>
 
 **Design Directory:**  
