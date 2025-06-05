@@ -60,7 +60,7 @@ A 5-day hands-on workshop focused on open-source EDA tools, layout design, cell 
 - Exporting GDSII and summary of end-to-end flow
 
 ---
-
+## 🗓️ Steps to Conduct Lab Experiments RTL2GDS
 ## 🏁 Conclusion
 
 This 5-day journey helped participants understand real-world digital VLSI backend workflows using fully open-source tools and SKY130 technology. Each module builds toward completing a digital RTL-to-GDSII flow.
