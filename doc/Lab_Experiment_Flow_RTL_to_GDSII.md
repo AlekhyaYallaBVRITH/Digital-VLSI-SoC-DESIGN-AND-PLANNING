@@ -11,6 +11,63 @@ Ensure the following tools are installed and properly configured:
 - SKY130 PDK (via `open_pdks` or `make pdk`)
 ---
 ## 🛠️ Environment Setup for OpenLANE (`picorv32a` Design)
+## 🛠️ **Working Directory**
+
+```bash
+~/Desktop/work/tools/openlane_working_dir/openlane
+```
+
+---
+
+## 📁 **Design Directory**
+
+```bash
+~/Desktop/work/tools/openlane_working_dir/openlane/design/picorv32a
+```
+
+---
+
+## 🎯 **Target Design**
+
+```text
+picorv32a
+```
+
+---
+
+## ⚙️ **Configuration Priority**
+
+```text
+Design-specific config.tcl overrides default tool parameters.
+```
+
+---
+
+## 🧪 **Steps to Initialize OpenLANE**
+
+### 🐳 Step 1: Start Docker Container
+
+```bash
+docker
+```
+
+### 🚀 Step 2: Launch OpenLANE Interface
+
+```bash
+./flow.tcl -interactive
+```
+
+### 📦 Step 3: Load OpenLANE Package (Inside OpenLANE Shell)
+
+```tcl
+package require openlane 0.9
+```
+
+### 🧬 Step 4: Prepare the Design
+
+```tcl
+prep -design picorv32a
+```
 
 **Working Directory:**  
 ```bash
