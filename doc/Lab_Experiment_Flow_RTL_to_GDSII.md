@@ -1,14 +1,6 @@
 ### 🧪 Steps For Laboratory Exercise To Implement RTL to GDSII
 
-### 📦 Prerequisites
 
-Ensure the following tools are installed and properly configured:
-
-- Docker
-- Git
-- Python 3
-- OpenLANE (cloned and built)
-- SKY130 PDK (via `open_pdks` or `make pdk`)
 ---
 
 ### Basic Linux Commands to start lab exercise
