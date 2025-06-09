@@ -108,13 +108,18 @@ From the report:
 
 - Number of DFFs = `1613`
 - Total number of cells = `14876`
----
-### DAY2 EXERCISE
-
 So,
 
 ```text
 Percentage of DFFs = (1613 / 14876) × 100 = 10.84%
 ```
-
-
+---
+### DAY2 EXERCISE
+FLOORPLAN AND PLACEMENT
+:~/Desktop/work/tools/openlane_working_dir/openlane/configuration contains the tool default configurations and README.md filde inside that folder lists all the diffrent config variables avaible for the designer
+priority : :~/Desktop/work/tools/openlane_working_dir/openlane/configuration < design/runs/config.tcl < design/PDK.tcl
+### 🧬 Step 5: Run FloorPlan
+```tcl
+run_floorplan
+# runs floorplan
+```
