@@ -252,3 +252,24 @@ Load the custom inverter layout in magic and explore.
    ```tcl
    what
    ```
+# Creating a folder in magic for git clone
+![15](https://github.com/user-attachments/assets/668a1696-6643-49f5-ae6f-18866c2158a0)
+### GUI in magic for Standard cell
+
+![16](https://github.com/user-attachments/assets/97c2d90c-fd37-41ff-b47a-75969845475a)
+# PMOS
+![17](https://github.com/user-attachments/assets/c6784e70-010f-462c-b260-ef879fadb673)
+
+# NMOS
+![18](https://github.com/user-attachments/assets/bcf16068-9106-4736-8cb5-12262ceda90b)
+
+# Make drain connections of PMOS and NMOS
+![19](https://github.com/user-attachments/assets/b2a02b78-df92-48e9-b0a0-3805dda29996) 
+# Make GND to NMOS connection
+![20](https://github.com/user-attachments/assets/94904a4e-a42e-4693-9833-8d2b3f26e13b)
+#inside the magic tkconsole
+extract all
+# creates cell.ext file
+ext2spice
+# creates spice file
+
