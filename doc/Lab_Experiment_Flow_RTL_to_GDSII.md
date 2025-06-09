@@ -328,3 +328,107 @@ ngsice terminal will open, inside that make sure there is no errors, warnings me
 plot y vs time a
 ```
 plotting output vs time and input
+
+# Cell Characterization: Transition Times and Cell Delays
+
+## Rise Transition Time Calculation
+
+**Formula:**
+
+```
+Rise Transition Time = Time at 80% Vout − Time at 20% Vout
+```
+
+**Voltage levels:**
+
+* 20% of Vout = **0.66 V**
+* 80% of Vout = **2.64 V**
+
+**Simulation Data:**
+
+* Time at 80% Vout = **2.2468 ns**
+* Time at 20% Vout = **2.1824 ns**
+
+**Calculation:**
+
+```
+Rise Transition Time = 2.2468 ns − 2.1824 ns = 0.06396 ns = 64.0 ps
+```
+
+---
+
+## 🔽 Fall Transition Time Calculation
+
+**Formula:**
+
+```
+Fall Transition Time = Time at 20% Vout − Time at 80% Vout
+```
+
+**Voltage levels:**
+
+* 20% of Vout = **0.66 V**
+* 80% of Vout = **2.64 V**
+
+**Simulation Data:**
+
+* Time at 20% Vout = **4.0955 ns**
+* Time at 80% Vout = **4.0530 ns**
+
+**Calculation:**
+
+```
+Fall Transition Time = 4.0955 ns − 4.0530 ns = 0.0425 ns = 42.5 ps
+```
+
+---
+
+## ⏱️ Rise Cell Delay Calculation
+
+**Formula:**
+
+```
+Rise Cell Delay = Time (Output rises to 50%) − Time (Input falls to 50%)
+```
+
+**Reference Voltage:**
+
+* 50% of VDD (3.3 V) = **1.65 V**
+
+**Simulation Data:**
+
+* Output at 50% = **2.21 ns**
+* Input at 50% = **2.15 ns**
+
+**Calculation:**
+
+```
+Rise Cell Delay = 2.21 ns − 2.15 ns = 0.06 ns = 60 ps
+```
+
+---
+
+## ⏱️ Fall Cell Delay Calculation
+
+**Formula:**
+
+```
+Fall Cell Delay = Time (Output falls to 50%) − Time (Input rises to 50%)
+```
+
+**Reference Voltage:**
+
+* 50% of VDD (3.3 V) = **1.65 V**
+
+**Simulation Data:**
+
+* Output at 50% = **4.0780 ns**
+* Input at 50% = **4.0501 ns**
+
+**Calculation:**
+
+```
+Fall Cell Delay = 4.0780 ns − 4.0501 ns = 0.0279 ns = 27.9 ps
+```
+
+---
