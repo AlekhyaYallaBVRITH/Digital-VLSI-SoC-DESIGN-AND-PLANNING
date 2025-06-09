@@ -37,42 +37,24 @@ Aspect Ratio defines the shape of the core area and impacts placement and routin
 - Non-square aspect ratios may be required for I/O or macro placement constraints.
 
 ---
+🧱 Preplaced Cells : top level logic is broken into mutiple cuts and are implemented separately
 
+Large reusable blocks (e.g., ALUs, comparators, muxes) can be implemented as preplaced IP blocks. *These cells are black-boxed and fixed in the layout before regular cell placement. *Decoupling Cells are placed around them to maintain stable voltage during power fluctuations by acting as capacitors.
 
-### ✅ Good vs Bad Floorplanning
-- Importance of floorplanning in chip design
-- Basic objectives of a good floorplan:
-  - Minimal congestion
-  - Optimal area utilization
-  - Power planning and placement
-- Comparison of good vs poor floorplans using visualization
+decoupling cells help maintain stable supply voltage across the logic they are placed near , by provding capacitive charging effect in the event of supply voltage drop due to reistance on the pwr supply path
 
-### ✅ Concepts Covered
-- Core utilization
-- Aspect ratio
-- Pin placement
-- Macro cell placement
-- Routing blockage
+🔌 Power Planning:
 
----
+A single power source leads to voltage drops in large circuits.
 
-## 🧱 Introduction to Library Cells
+Power Meshes are used to distribute power efficiently across the chip.
 
-### What Are Standard Cells?
-- Logic gates (NAND, NOR, INV)
-- Flip-flops, latches
-- DFF, buffers, etc.
+📍 Pin Placement:
 
-### Library Cell Views:
-- `.lef`, `.lib`, `.gds`, `.mag`, `.spice`
-- Purpose of each view in the OpenLANE flow
+Pin positioning should reflect signal flow and reduce routing complexity.
 
-### Practical Exploration
-- Using OpenLANE’s `pdn.tcl` and `floorplan.tcl` scripts
-- Viewing standard cells using Magic layout tool
-- Parameters: Cell height, pitch, drive strength
+A good understanding of internal logic is required for optimal pin placement.
 
----
 
 ## 🛠️ Tools Used
 
