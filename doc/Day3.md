@@ -94,7 +94,6 @@ After completing all fabrication steps, we have a functional CMOS chip with mult
 ![IMG-20250609-WA1666](https://github.com/user-attachments/assets/129dc772-4480-4a2d-ba37-207ffa692d82)
 ![IMG-20250609-WA1667](https://github.com/user-attachments/assets/521952e5-dcd2-42f0-bf0e-a7a95f00f316)
 ![IMG-20250609-WA1668](https://github.com/user-attachments/assets/0433a736-9948-40d9-a79c-4ec18d47e0f6)
-![IMG-20250609-WA1669](https://github.com/user-attachments/assets/c8a125d0-cb0c-4de0-807b-35105091dff0)
 ![IMG-20250609-WA1670](https://github.com/user-attachments/assets/e4043dca-59fd-47bc-a3fe-cd0aa8b8acb4)
 ![IMG-20250609-WA1671](https://github.com/user-attachments/assets/82ad22ea-5dc9-4398-97be-e4fc190b54f1)
 ![IMG-20250609-WA1672](https://github.com/user-attachments/assets/1eba4728-d0c1-451e-a22a-4844a054e2bd)
