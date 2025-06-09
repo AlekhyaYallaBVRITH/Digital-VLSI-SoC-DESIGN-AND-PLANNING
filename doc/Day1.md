@@ -40,21 +40,10 @@ A beginner-friendly guide and hands-on resources for learning the **RISC-V ISA**
 
 ---
 
-## 📚 Table of Contents
-
-- [Introduction](#introduction)
-- [Why RISC-V?](#why-risc-v)
-- [RISC-V Base and Extensions](#risc-v-base-and-extensions)
-- [Instruction Formats](#instruction-formats)
-- [Example Programs](#example-programs)
-- [Tools and Simulators](#tools-and-simulators)
-- [References](#references)
-
----
 
 ## 🔍 Introduction
 
-RISC-V is a **Reduced Instruction Set Computer (RISC)** architecture developed at UC Berkeley. It provides a modular ISA that can be used in everything from small embedded devices to powerful high-performance computing.
+RISC-V is a **Reduced Instruction Set Computer (RISC)** architecture developed at UC Berkeley. It provides a modular ISA that can be used in everything from small embedded devices to powerful high-performance computing. RISC-V is a modern, open-standard Instruction Set Architecture (ISA) based on the principles of Reduced Instruction Set Computing (RISC). Developed at the University of California, Berkeley, RISC-V is designed to be simple, modular, and extensible, making it suitable for a wide range of computing applications—from embedded systems to high-performance processors. Unlike proprietary ISAs such as x86 or ARM, RISC-V is royalty-free and openly available, encouraging innovation and reducing barriers to entry for hardware design. Its base integer instruction set can be extended with standard modules for multiplication, atomic operations, floating-point arithmetic, vector processing, and compressed instructions. RISC-V supports 32-bit, 64-bit, and 128-bit data widths, offering excellent scalability. With growing support from industry and academia, and a vibrant ecosystem of tools, compilers, and operating systems, RISC-V is poised to become a dominant architecture in next-generation computing.
 
 ---
 
