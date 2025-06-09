@@ -27,11 +27,11 @@ PDK (Process Design Kit) Data
 ASIC Implementation Flow
 OpenLANE orchestrates the following sequential steps:
 
-Synthesis: Converts RTL to PDK-specific physical library netlist
-Floorplan & Power Planning: Establishes die dimensions, pin configuration, and power distribution
-Placement: Positions standard cells within core region
-Clock Tree Synthesis (CTS): Implements clock distribution network
-Routing: Establishes signal interconnections
+Synthesis: Converts RTL to PDK-specific physical library netlist  
+Floorplan & Power Planning: Establishes die dimensions, pin configuration, and power distribution  
+Placement: Positions standard cells within core region  
+Clock Tree Synthesis (CTS): Implements clock distribution network  
+Routing: Establishes signal interconnections  
 Sign-off: Performs DRC, LVS, timing verification, and GDS generation
 
 ## Tools Used
