@@ -160,7 +160,8 @@ Area (in microns²) = (Width × Height) / (1000 × 1000)
 
 ---
 # in a seperate terminal enter the directory with def filr (results folder in recent run stage : floorplan)
+```tcl
 magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
-
+```
 
  
