@@ -275,4 +275,47 @@ ext2spice
 ---
 ## Step 5.2 : Cell Characterization
 After creating the cell layout, characterization is performed to evaluate parameters such as timing and noise. Timing characterization involves extracting parasitic elements—resistance (R) and capacitance (C)—from the layout. These parasitics are then used in circuit simulations to analyze the cell's dynamic behavior. For the inverter (INV) cell, transient analysis is typically conducted to determine key metrics including rise time, fall time, output transition time, and cell delay.
+Here’s a rewritten and organized version of the steps to prepare the SPICE deck for simulation:
+
+---
+
+###  Steps to Prepare the SPICE Deck for Simulation
+
+1. **Export Netlist from Magic:**
+
+   * Use the `ext2spice` tool in Magic to extract the SPICE netlist from your layout.
+
+2. **Edit the SPICE Netlist:**
+
+   * Open the generated SPICE file in a text editor for modifications.
+
+3. **Include Model Libraries:**
+
+   * Add `.include` statements for the NMOS and PMOS model files (e.g., paths to `sky130_fd_pr__nfet_01v8` and `sky130_fd_pr__pfet_01v8`).
+
+4. **Set Simulation Environment:**
+
+   * Define simulation options such as grid size, temperature, and other global settings if required.
+
+5. **Verify Device Models:**
+
+   * Ensure the correct transistor models are used and their names match the included library files.
+
+6. **Connect Power Rails:**
+
+   * Add `.global` definitions for `VDD` and `GND`, and connect them appropriately in the circuit.
+
+7. **Define Inputs and Outputs:**
+
+   * Attach input signals (e.g., pulse source) and specify the output nodes where voltages will be observed.
+
+8. **Set Simulation Type and Parameters:**
+
+   * Specify the type of simulation (e.g., `.tran` for transient analysis) and define relevant parameters such as time step and total simulation time.
+
+9. **End the Deck:**
+
+   * Ensure the file ends with a `.end` statement to mark the conclusion of the SPICE deck.
+
+---
 
