@@ -160,7 +160,5 @@ Area (in microns²) = (Width × Height) / (1000 × 1000)
 
 ---
 
-> 📎 This area reflects the actual footprint of the design, derived from the DEF file after floorplanning. It is crucial for chip cost, packing density, and DRC validation.
-
 
  
