@@ -502,20 +502,29 @@ To improve the timing of the design during synthesis, we can alter some of the v
 
 Changing the variables in openlane terminal
 
-# Command to display current value of variable SYNTH_STRATEGY
-echo $::env(SYNTH_STRATEGY)
+Command to display current value of variable SYNTH_STRATEGY
+
+```tcl echo $::env(SYNTH_STRATEGY)
+```
 
 # Command to set new value for SYNTH_STRATEGY
+
+```tcl
 set ::env(SYNTH_STRATEGY) "DELAY 3"
-
+```
 # Command to display current value of variable SYNTH_BUFFERING to check whether it's enabled , if enabled =1
+```tcl
 echo $::env(SYNTH_BUFFERING)
-
+```
 # Command to display current value of variable SYNTH_SIZING, if enabled =1
+```tcl
 echo $::env(SYNTH_SIZING)
-
-# Command to set new value for SYNTH_SIZING
+```
+Command to set new value for SYNTH_SIZING
+```tcl
 set ::env(SYNTH_SIZING) 1
-
+```
 # Command to display current value of variable SYNTH_DRIVING_CELL to check whether it's the proper cell or not
+```tcl
 echo $::env(SYNTH_DRIVING_CELL)
+```
