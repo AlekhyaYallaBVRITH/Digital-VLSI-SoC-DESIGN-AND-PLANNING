@@ -473,3 +473,4 @@ set ::env(LIB_TYPICAL) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc
 
 # Include any additional LEF files from the src directory
 set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/src/*.lef]
+These settings ensure the OpenLANE flow uses your updated .lib and .lef files for synthesis, placement, and routing.
