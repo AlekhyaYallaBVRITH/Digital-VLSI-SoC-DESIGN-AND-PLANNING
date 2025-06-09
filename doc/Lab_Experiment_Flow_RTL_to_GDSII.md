@@ -192,6 +192,8 @@ magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/
 Floorplan data
 
 ![10](https://github.com/user-attachments/assets/9f34d414-1fbb-4e6f-829c-3a98cf0c870e)
+
+
 ### 🧬 Step 5: Run FloorPlan
 The library holds cell data for timing and layout. In placement, netlist elements are arranged in the core area based on pin positions and interconnect estimates. Transition analysis checks delays; if needed, buffers are added to fix timing.
 ```tcl
@@ -203,3 +205,26 @@ To check def file generated in magic
 # Open new terminal enter the directory with def file (results folder in recent run stage : placement)
 magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
 
+To view the def file
+![12](https://github.com/user-attachments/assets/c8f2a88c-b96e-47ee-a3e6-d039180e6d0d)
+---
+### Day 3 Exercise
+### 🧬 Step 5: Design library cell using Magic Layout and ngspice characterization
+Clone custom inverter standard cell design from github repository: nickson-jose vsdstdcelldesign.  
+Load the custom inverter layout in magic and explore.
+
+# Enter the Openlane work dir 
+# Clone the repo with custom inverter design
+git clone https://github.com/nickson-jose/vsdstdcelldesign.git
+
+# Enter repo directory
+cd vsdstdcelldesign
+
+# Copy magic tech file to the repo directory for easy access
+cp ../../pdks/sky130A/libs.tech/magic/sky130A.tech .
+
+# Command to open custom inverter layout in magic
+magic -T sky130A.tech sky130_inv.mag &
+
+# Do "s" to select the element under the cursor. multiple "s" selects all elements connected to the element under the cursor
+# after selection in tkconsole  of magic enter the command "what" to get info on elements selected
