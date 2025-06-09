@@ -447,3 +447,12 @@ Select the desired layer by clicking it with the middle mouse button in the Laye
 ![22](https://github.com/user-attachments/assets/718d01d2-37c5-429d-a07e-99e0cbd67d14)
 ![Screenshot from 2025-04-01 20-02-47](https://github.com/user-attachments/assets/2ca90b74-353f-4f1d-8231-586ab9879c21)
 
+## Step 5.3 : Timing and Parasitic Extraction
+These library files are typically generated using the Magic GUI, which extracts essential timing and parasitic information directly from the design layout.
+**To rename the cell design**
+save <new name>.mag
+
+save sky130_vsdinv.mag
+
+**open the design in new gui and write lef**
+write lef <optional name, default is the design name in the gui> 
