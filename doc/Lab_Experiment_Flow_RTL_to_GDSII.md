@@ -147,13 +147,10 @@ The **Floorplan DEF file** provides physical design dimensions in terms of **uni
 
 ### 📦 Die Area Calculation
 
-\[
-\text{Area (in microns}^2) = \frac{660685 \times 671405}{1000 \times 1000}
-\]
-
-\[
-= \frac{443,587,208,925}{1,000,000} = \boxed{443,587.21 \, \mu m^2}
-\]
+Area (in microns²) = (Width × Height) / (1000 × 1000)
+                   = (660685 × 671405) / 1,000,000
+                   = 443,587,208,925 / 1,000,000
+                   = 443,587.21 µm²
 
 ---
 
