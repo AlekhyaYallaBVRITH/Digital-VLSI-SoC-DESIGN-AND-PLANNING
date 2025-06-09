@@ -65,18 +65,4 @@ A good understanding of internal logic is required for optimal pin placement.
 
 ---
 
-## 📸 Visual Examples
-
-- [ ] Add screenshots of good vs bad floorplans
-- [ ] Insert snapshots from Magic showing library cells
-
----
-
-## 💡 Key Takeaways
-
-- Floorplanning is a critical early stage that impacts timing, power, and routability.
-- Standard cells are reusable blocks that form the basis of digital IC design.
-- Open source tools like Magic and OpenLANE allow deep insight into standard cell design and integration.
-
----
 
