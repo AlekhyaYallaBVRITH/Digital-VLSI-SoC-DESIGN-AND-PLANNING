@@ -494,3 +494,4 @@ set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
 add_lefs -src $lefs
 
 run_synthesis
+After completing the synthesis run, review the generated reports to analyze key performance metrics. Focus on the chip area to understand the total physical space occupied by the design. Additionally, examine the timing results, particularly the Worst Negative Slack (WNS) and Total Negative Slack (TNS), which indicate how well the design meets its timing constraints. These values help assess whether the synthesized circuit operates within the desired clock period and identify potential timing violations that need to be addressed in later stages.
