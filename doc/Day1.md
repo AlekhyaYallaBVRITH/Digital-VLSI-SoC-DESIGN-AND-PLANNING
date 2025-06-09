@@ -34,6 +34,39 @@ Clock Tree Synthesis (CTS): Implements clock distribution network
 Routing: Establishes signal interconnections  
 Sign-off: Performs DRC, LVS, timing verification, and GDS generation
 
+# 🚀 RISC-V Instruction Set Architecture
+
+A beginner-friendly guide and hands-on resources for learning the **RISC-V ISA** — an open, free-to-use instruction set designed for modern processors.
+
+---
+
+## 📚 Table of Contents
+
+- [Introduction](#introduction)
+- [Why RISC-V?](#why-risc-v)
+- [RISC-V Base and Extensions](#risc-v-base-and-extensions)
+- [Instruction Formats](#instruction-formats)
+- [Example Programs](#example-programs)
+- [Tools and Simulators](#tools-and-simulators)
+- [References](#references)
+
+---
+
+## 🔍 Introduction
+
+RISC-V is a **Reduced Instruction Set Computer (RISC)** architecture developed at UC Berkeley. It provides a modular ISA that can be used in everything from small embedded devices to powerful high-performance computing.
+
+---
+
+## ❓ Why RISC-V?
+
+- ✅ Open-source and royalty-free
+- ✅ Modular and extensible
+- ✅ Easy to implement and understand
+- ✅ Supported by compile
+
+
+
 ## Tools Used
 - OpenLANE
 - SKY130
