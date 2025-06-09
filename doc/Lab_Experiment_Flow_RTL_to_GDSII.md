@@ -318,4 +318,13 @@ Here’s a rewritten and organized version of the steps to prepare the SPICE dec
    * Ensure the file ends with a `.end` statement to mark the conclusion of the SPICE deck.
 
 ---
-
+# ngspice simulation commands
+# Command to directly load spice file for simulation to ngspice
+```tcl
+ngspice sky130_inv.spice
+```
+# ngsice terminal will open, inside that make sure there is no errors, warnings mentioned. if errors are present, solve them first, before proceeding any further
+```tcl
+plot y vs time a
+```
+# plotting output vs time and input
