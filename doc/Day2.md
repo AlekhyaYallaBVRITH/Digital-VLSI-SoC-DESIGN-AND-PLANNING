@@ -3,6 +3,16 @@
 ---
 
 ## 🔧 Topics Covered
+ It is the first step in physical design flow to find out the width and height. Let's begin with a netlist, netlist is two flipflops and have a simple combination logic in between. A netlist describes the connectivity of an electronic design. Here, we dependent on the dimensions of the logic gates(AND & OR) and particular flipflop. Now, let's convert the symbols into physical dimensions. We are interested in the dimensions of the Core and Die not in the dimensions of the wires.
+
+Let's standard cell have dimensions of 1unit*1unit
+
+So, area= 1 Sq. units
+
+Asuume same area for the flipflop as well = 1 Sq. units
+
+with help of these dimensions and netlist let's calculate the area occupied by the netlist on a silicon wafer.
+![Uploading 318098509-abf79875-e1e3-4faf-87a6-43a12d44db8d.png…]()
 
 ### ✅ Good vs Bad Floorplanning
 - Importance of floorplanning in chip design
