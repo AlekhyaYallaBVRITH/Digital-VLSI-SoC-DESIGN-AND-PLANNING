@@ -77,3 +77,12 @@ prep -design picorv32a
 ![1](https://github.com/user-attachments/assets/fee1ba32-7096-4dfb-8246-b1eec197669d)
 ### Review files after design prep and run synthesis
 
+After the preparation step, a run directory with the current date is created inside the picorv32a folder. It contains essential files for OpenLANE, including the merged.lef file in the temp folder, which holds key cell and routing layer information needed for layout and placement.
+![2](https://github.com/user-attachments/assets/1e6d9afb-222b-4fd3-b962-1b02ba51781f)
+![3](https://github.com/user-attachments/assets/18fecab1-b461-4aa7-badd-4262f1761f1d)
+
+### 🧬 Step 5: Run Synthesis
+```tcl
+run_synthesis
+# runs synthesis
+```
