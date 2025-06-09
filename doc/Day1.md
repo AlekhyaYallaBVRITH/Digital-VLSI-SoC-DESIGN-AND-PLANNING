@@ -61,18 +61,18 @@ Synthesis
 Converts RTL (Verilog) code to gate-level netlist using Yosys.
 
 Floorplanning
-Defines the core area, placement of macros, and I/O pin locations.
-Placement
-Places standard cells in the defined area while optimizing timing and area.
-Clock Tree Synthesis (CTS)
-Generates and balances the clock tree to minimize skew.
-Routing
-Connects all placed cells with metal layers considering DRC rules.
-GDSII Generation
-Creates the final layout in GDSII format for tapeout.
-DRC/LVS Checks
-Design Rule Check (DRC) and Layout vs Schematic (LVS) ensure layout correctness.
-4. Output Files
+Defines the core area, placement of macros, and I/O pin locations.  
+Placement  
+Places standard cells in the defined area while optimizing timing and area.  
+Clock Tree Synthesis (CTS)  
+Generates and balances the clock tree to minimize skew.  
+Routing  
+Connects all placed cells with metal layers considering DRC rules.  
+GDSII Generation  
+Creates the final layout in GDSII format for tapeout.  
+DRC/LVS Checks  
+Design Rule Check (DRC) and Layout vs Schematic (LVS) ensure layout correctness.  
+4. Output Files  
 Key output files generated in the OpenLANE flow include:
 - synthesized.v (Netlist)
 - def file (Design Exchange Format layout)
