@@ -209,22 +209,46 @@ To view the def file
 ![12](https://github.com/user-attachments/assets/c8f2a88c-b96e-47ee-a3e6-d039180e6d0d)
 ---
 ### Day 3 Exercise
+
 ### 🧬 Step 5: Design library cell using Magic Layout and ngspice characterization
 Clone custom inverter standard cell design from github repository: nickson-jose vsdstdcelldesign.  
 Load the custom inverter layout in magic and explore.
 
-# Enter the Openlane work dir 
-# Clone the repo with custom inverter design
-git clone https://github.com/nickson-jose/vsdstdcelldesign.git
+## Step 5.1 : Viewing Custom Inverter Layout in Magic
 
-# Enter repo directory
-cd vsdstdcelldesign
+### 🛠️ Setup Instructions
 
-# Copy magic tech file to the repo directory for easy access
-cp ../../pdks/sky130A/libs.tech/magic/sky130A.tech .
+1. **Enter OpenLane working directory**  
+   *(Make sure you're inside the OpenLane environment)*
 
-# Command to open custom inverter layout in magic
-magic -T sky130A.tech sky130_inv.mag &
+2. **Clone the custom inverter repo**:
+   ```bash
+   git clone https://github.com/nickson-jose/vsdstdcelldesign.git
+   ```
 
-# Do "s" to select the element under the cursor. multiple "s" selects all elements connected to the element under the cursor
-# after selection in tkconsole  of magic enter the command "what" to get info on elements selected
+3. **Enter the cloned repo**:
+   ```bash
+   cd vsdstdcelldesign
+   ```
+
+4. **Copy the Magic tech file to the working directory**:
+   ```bash
+   cp ../../pdks/sky130A/libs.tech/magic/sky130A.tech .
+   ```
+
+5. **Open the inverter layout in Magic**:
+   ```bash
+   magic -T sky130A.tech sky130_inv.mag &
+   ```
+
+---
+
+### 🖱️ Magic GUI Controls
+
+- Press **`s`** to select the element under the cursor.  
+  Press **`s`** again to expand the selection to connected elements.
+
+- In the **tkcon** console (inside Magic), type:
+   ```tcl
+   what
+   ```
