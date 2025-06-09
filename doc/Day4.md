@@ -38,7 +38,7 @@ rise_transition (delay_template_1x1) {
 }
 
 ---
-# ⏰ Clock Tree Synthesis (CTS) and Signal Integrity
+### ⏰ Clock Tree Synthesis (CTS) and Signal Integrity
 
 ## Overview
 Clock tree synthesis (CTS) is a critical step in the digital backend flow. It ensures the clock signal reaches all sequential elements (like flip-flops) with minimal skew and maximum signal integrity. TritonCTS (used in OpenROAD/OpenLANE flows) supports H-tree-based routing with buffers to balance delays and improve performance.
