@@ -465,6 +465,7 @@ write lef <optional name, default is the design name in the gui>
 ![Screenshot-36](https://github.com/user-attachments/assets/5d27f987-b21c-470b-b0bf-95f6dda4e810)
 
 Edit the design/config.tcl file to include the paths to the newly added .lib and .lef files in the src folder. This ensures that the OpenLANE flow uses the updated library and layout information during the design process.
+
 **Set paths to different timing corner library files**
 set ::env(LIB_SYNTH)   "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
 set ::env(LIB_FASTEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__fast.lib"
