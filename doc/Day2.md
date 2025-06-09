@@ -31,7 +31,7 @@ with help of dimensions and netlist let's calculate the area occupied by the net
 Aspect Ratio defines the shape of the core area and impacts placement and routing efficiency.
 
 `Aspect Ratio = Height of core / Width of core`
-
+---
 - **Ideal value:** ≈ 1.0 (square layout)
 - A square shape offers balanced routing paths and fewer long nets.
 - Non-square aspect ratios may be required for I/O or macro placement constraints.
