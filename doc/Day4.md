@@ -36,7 +36,7 @@ rise_transition (delay_template_1x1) {
     index_2 ("0.01");
     values ("0.012");  // transition time in ns
 }
-
+```
 ---
 ### ⏰ Clock Tree Synthesis (CTS) and Signal Integrity
 
