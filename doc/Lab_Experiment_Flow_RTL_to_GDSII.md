@@ -86,3 +86,32 @@ After the preparation step, a run directory with the current date is created ins
 run_synthesis
 # runs synthesis
 ```
+After the run, the generated run directory contains key files: the results folder holds the synthesized netlist, reports includes synthesis reports (the latest one is most reliable), and logs stores all related log files.
+![4](https://github.com/user-attachments/assets/7d1315e5-84a0-4149-a8e8-68f3fffa6741)
+### 📊 DFF Ratio Calculation
+
+At this step, we evaluate the **flip-flop (DFF) ratio** to understand sequential logic density in the design. The formula is:
+
+```text
+Flip Flop Ratio = (Number of D Flip Flops) / (Total Number of Cells)
+Percentage of DFFs = Flip Flop Ratio × 100
+```
+
+📁 The synthesis report is located at:
+
+```text
+reports/synthesis/1-yosys_4.stat.rpt
+```
+
+From the report:
+
+- Number of DFFs = `1613`
+- Total number of cells = `14876`
+
+So,
+
+```text
+Percentage of DFFs = (1613 / 14876) × 100 = 10.84%
+```
+
+
