@@ -187,5 +187,8 @@ magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/
 
   ```tcl
   what
+  
+ ![9](https://github.com/user-attachments/assets/06c96a16-469e-4766-954b-e193e968e01b)
+Floorplan data
 
- 
+![10](https://github.com/user-attachments/assets/9f34d414-1fbb-4e6f-829c-3a98cf0c870e)
