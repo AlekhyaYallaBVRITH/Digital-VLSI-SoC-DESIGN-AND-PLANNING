@@ -192,3 +192,12 @@ magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/
 Floorplan data
 
 ![10](https://github.com/user-attachments/assets/9f34d414-1fbb-4e6f-829c-3a98cf0c870e)
+### 🧬 Step 5: Run FloorPlan
+The library holds cell data for timing and layout. In placement, netlist elements are arranged in the core area based on pin positions and interconnect estimates. Transition analysis checks delays; if needed, buffers are added to fix timing.
+```tcl
+run_placement
+![11](https://github.com/user-attachments/assets/5ef46382-46ee-4e71-a01b-d5688f1206c2)
+To check def file generated in magic
+# Open new terminal enter the directory with def file (results folder in recent run stage : placement)
+magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
+
