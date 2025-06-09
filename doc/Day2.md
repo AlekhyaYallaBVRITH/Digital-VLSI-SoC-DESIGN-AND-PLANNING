@@ -15,21 +15,22 @@ with help of dimensions and netlist let's calculate the area occupied by the net
 
 ![318098509-abf79875-e1e3-4faf-87a6-43a12d44db8d](https://github.com/user-attachments/assets/248127dd-528e-4a7c-802c-a188fbe99b43)
 
+## 📏 Utilization and Aspect Ratio in Floorplanning
+
+### 🔹 Utilization
+
+**Utilization** describes how much of the core area is occupied by logic cells such as standard cells, flip-flops, etc.
+
+**Formula:**
+
 `Utilization = (Area used by netlist) / (Total core area)`
-
-- **Recommended range:** 50% to 80%
-- **Too low:** Wastes silicon area, increases interconnect delay
-- **Too high:** Leads to routing congestion, DRC violations, and timing failures
-
 ---
 
-### 🔹 Aspect Ratio
+### Aspect Ratio
 
 Aspect Ratio defines the shape of the core area and impacts placement and routing efficiency.
 
-\[
-\text{Aspect Ratio} = \frac{\text{Height of core}}{\text{Width of core}}
-\]
+`Aspect Ratio = Height of core / Width of core`
 
 - **Ideal value:** ≈ 1.0 (square layout)
 - A square shape offers balanced routing paths and fewer long nets.
