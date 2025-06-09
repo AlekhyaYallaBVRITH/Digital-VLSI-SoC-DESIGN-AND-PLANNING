@@ -1,4 +1,4 @@
-### 🧪 Steps For Laboratory Exercise To Implement RTL to GDSII
+### 🧪 Steps For Laboratory Exercise To Implement RTL to GDSII from DAY 1 TO Day 5
 
 
 ---
