@@ -532,3 +532,6 @@ set ::env(SYNTH_SIZING) 1
 ```tcl
 echo $::env(SYNTH_DRIVING_CELL)
 ```
+```tcl
+run_synthesis
+```
