@@ -115,11 +115,55 @@ Percentage of DFFs = (1613 / 14876) × 100 = 10.84%
 ```
 ---
 ### DAY2 EXERCISE
-FLOORPLAN AND PLACEMENT
-:~/Desktop/work/tools/openlane_working_dir/openlane/configuration contains the tool default configurations and README.md filde inside that folder lists all the diffrent config variables avaible for the designer
+FLOORPLAN AND PLACEMENT  
+
+: ~/Desktop/work/tools/openlane_working_dir/openlane/configuration contains the tool default configurations and README.md file inside that folder lists all the diffrent config variables avaible for the designer
 priority : :~/Desktop/work/tools/openlane_working_dir/openlane/configuration < design/runs/config.tcl < design/PDK.tcl
 ### 🧬 Step 5: Run FloorPlan
 ```tcl
 run_floorplan
 # runs floorplan
 ```
+![5](https://github.com/user-attachments/assets/26cd8133-68bf-46c5-b50d-d95fd42a0cec)
+
+## 📐 Die Area Estimation from Floorplan DEF
+
+The **Floorplan DEF file** provides physical design dimensions in terms of **unit distances**. These unit distances are used to calculate the **actual die area** in microns.
+
+---
+
+### 🧮 Unit Conversion
+
+- **1000 Unit Distance = 1 Micron**
+
+---
+
+### 📏 Floorplan Dimensions (in unit distance)
+
+- **Width** = `660685 - 0 = 660685`
+- **Height** = `671405 - 0 = 671405`
+
+---
+
+### 📦 Die Area Calculation
+
+\[
+\text{Area (in microns}^2) = \frac{660685 \times 671405}{1000 \times 1000}
+\]
+
+\[
+= \frac{443,587,208,925}{1,000,000} = \boxed{443,587.21 \, \mu m^2}
+\]
+
+---
+
+### ✅ Result
+
+- **Total Die Area** = `443,587.21 µm²`
+
+---
+
+> 📎 This area reflects the actual footprint of the design, derived from the DEF file after floorplanning. It is crucial for chip cost, packing density, and DRC validation.
+
+
+ 
