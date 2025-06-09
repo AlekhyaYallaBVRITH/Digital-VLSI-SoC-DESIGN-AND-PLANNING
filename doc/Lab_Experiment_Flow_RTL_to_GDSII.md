@@ -432,3 +432,12 @@ Fall Cell Delay = 4.0780 ns − 4.0501 ns = 0.0279 ns = 27.9 ps
 ```
 
 ---
+To download drc file into home directory folder
+cd drc_tests                 # Navigate to the directory containing DRC test files
+
+vi .magicrc                 # Open the Magic configuration file in 'vi' editor
+
+magic -d XR met3.mag &      # Launch Magic in the 'XR' display mode and open the 'met3.mag' layout file
+---
+Create a bounding box (bbox) in the layout window using the left and right mouse buttons.  
+Select the desired layer by clicking it with the middle mouse button in the Layers panel.
