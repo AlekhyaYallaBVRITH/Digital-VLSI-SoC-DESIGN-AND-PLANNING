@@ -496,3 +496,4 @@ add_lefs -src $lefs
 run_synthesis
 After completing the synthesis run, review the generated reports to analyze key performance metrics. Focus on the chip area to understand the total physical space occupied by the design. Additionally, examine the timing results, particularly the Worst Negative Slack (WNS) and Total Negative Slack (TNS), which indicate how well the design meets its timing constraints. These values help assess whether the synthesized circuit operates within the desired clock period and identify potential timing violations that need to be addressed in later stages.
 The presence of the custom sky130_vsdinv cell in temp/merged.lef indicates that the cell was successfully included and utilized during the synthesis process. This confirms that the OpenLANE flow correctly recognized and integrated the custom cell into the design.
+![Screenshot from 2025-04-02 20-15-58](https://github.com/user-attachments/assets/5cebbbb6-a41b-4673-a8b9-96949bfde7b7)
