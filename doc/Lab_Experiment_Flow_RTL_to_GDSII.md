@@ -163,5 +163,29 @@ Area (in microns²) = (Width × Height) / (1000 × 1000)
 ```tcl
 magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
 ```
+## 🧭 Magic GUI: Navigating and Inspecting the Layout
+
+### 🔹 Centering the Design
+- Press **`s`** to select the entire design.
+- Press **`v`** to center and zoom into the selected region.
+
+---
+
+### 🔍 Zooming into a Specific Area
+- Move your cursor to the **bottom-left corner** of the area.
+- **Left-click** to set the starting point `(x1, y1)`.
+- Move your cursor to the **top-right corner** of the area.
+- **Right-click** to complete the zoom box and focus in.
+
+---
+
+### 📌 Inspecting a Specific Object (e.g., Pin or Cell)
+- Hover over the object you want to inspect (e.g., pin or cell).
+- Press **`s`** to select the object.
+- Open the **tkcon** (Magic's Tcl console).
+- Type the command:
+
+  ```tcl
+  what
 
  
