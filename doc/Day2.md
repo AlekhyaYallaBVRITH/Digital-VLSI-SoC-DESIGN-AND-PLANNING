@@ -12,7 +12,7 @@ So, area= 1 Sq. units
 Asuume same area for the flipflop as well = 1 Sq. units
 
 with help of these dimensions and netlist let's calculate the area occupied by the netlist on a silicon wafer.
-![Uploading 318098509-abf79875-e1e3-4faf-87a6-43a12d44db8d.png…]()
+![Uploading 318098509-abf79875-e1e3-4faf-87a6-43a12d44db8d.png…]
 
 ### ✅ Good vs Bad Floorplanning
 - Importance of floorplanning in chip design
