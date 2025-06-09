@@ -477,19 +477,19 @@ set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/sr
 
 These settings ensure the OpenLANE flow uses your updated .lib and .lef files for synthesis, placement, and routing.
 
-# Open the openlane terminal
+**Open the openlane terminal**
 cd Desktop/work/tools/openlane_working_dir/openlane
 
 docker
 
 ./flow.tcl -interactive
 
-# Inside openlane terminal
+**Inside openlane terminal**
 
-# below cmd to be used to overwrite previous run data 
+**below cmd to be used to overwrite previous run data** 
 prep -design picorv32a -tag <prev run folder inside /runs> -overwrite 
 
-# Cmds to include the new cell led in merged.lef in /tm[ folder
+**Cmds to include the new cell led in merged.lef in /tm[ folder**
 set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
 add_lefs -src $lefs
 
