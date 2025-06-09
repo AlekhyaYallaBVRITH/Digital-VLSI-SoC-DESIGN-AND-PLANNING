@@ -18,6 +18,7 @@ command --help : shows the complete use that command
 clear : clears the terminal screen
 
 ---
+### DAY 1 EXERCISE
 ## 🛠️ Environment Setup for OpenLANE (`picorv32a` Design)
 ## 🛠️ **Working Directory**
 
@@ -107,6 +108,8 @@ From the report:
 
 - Number of DFFs = `1613`
 - Total number of cells = `14876`
+---
+### DAY2 EXERCISE
 
 So,
 
