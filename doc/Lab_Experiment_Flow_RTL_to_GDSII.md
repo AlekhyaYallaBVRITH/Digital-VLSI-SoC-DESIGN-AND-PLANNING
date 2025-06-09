@@ -456,3 +456,10 @@ save sky130_vsdinv.mag
 
 **open the design in new gui and write lef**
 write lef <optional name, default is the design name in the gui> 
+![Screenshot-37](https://github.com/user-attachments/assets/c2eeb345-4d2d-4874-90b0-1739525b90be)
+
+
+* **Copy the `.lib` and `.lef` files** to the following directory:
+  `design/<design_name>/src`
+  *(Replace `<design_name>` with your actual design folder name.)*
+
