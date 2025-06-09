@@ -272,4 +272,7 @@ extract all
 # creates cell.ext file
 ext2spice
 # creates spice file
+---
+## Step 5.2 : Cell Characterization
+After creating the cell layout, characterization is performed to evaluate parameters such as timing and noise. Timing characterization involves extracting parasitic elements—resistance (R) and capacitance (C)—from the layout. These parasitics are then used in circuit simulations to analyze the cell's dynamic behavior. For the inverter (INV) cell, transient analysis is typically conducted to determine key metrics including rise time, fall time, output transition time, and cell delay.
 
