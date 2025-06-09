@@ -462,4 +462,6 @@ write lef <optional name, default is the design name in the gui>
 * **Copy the `.lib` and `.lef` files** to the following directory:
   `design/<design_name>/src`
   *(Replace `<design_name>` with your actual design folder name.)*
+![Screenshot-36](https://github.com/user-attachments/assets/5d27f987-b21c-470b-b0bf-95f6dda4e810)
 
+Edit the design/config.tcl file to include the paths to the newly added .lib and .lef files in the src folder. This ensures that the OpenLANE flow uses the updated library and layout information during the design process.
