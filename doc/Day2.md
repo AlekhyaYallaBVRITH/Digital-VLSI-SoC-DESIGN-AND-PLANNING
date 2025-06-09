@@ -32,9 +32,13 @@ Aspect Ratio defines the shape of the core area and impacts placement and routin
 
 `Aspect Ratio = Height of core / Width of core`
 ---
+
 - **Ideal value:** ≈ 1.0 (square layout)
 - A square shape offers balanced routing paths and fewer long nets.
 - Non-square aspect ratios may be required for I/O or macro placement constraints.
+Example:
+![WhatsApp Image 2025-06-09 at 10 19 25_47a44d4d](https://github.com/user-attachments/assets/7fee9a7e-61c9-4b1e-a7af-2eee18ee2d62)
+![WhatsApp Image 2025-06-09 at 10 19 44_86d5d46a](https://github.com/user-attachments/assets/c19f5875-94a9-496b-bc25-1f37ad80a330)
 
 ---
 🧱 Preplaced Cells : top level logic is broken into mutiple cuts and are implemented separately
