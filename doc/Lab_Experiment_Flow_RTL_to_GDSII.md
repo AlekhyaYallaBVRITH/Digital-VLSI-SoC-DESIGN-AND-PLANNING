@@ -116,9 +116,10 @@ Percentage of DFFs = (1613 / 14876) × 100 = 10.84%
 ---
 ### DAY2 EXERCISE
 FLOORPLAN AND PLACEMENT  
-
+```text
 : ~/Desktop/work/tools/openlane_working_dir/openlane/configuration contains the tool default configurations and README.md file inside that folder lists all the diffrent config variables avaible for the designer
 priority : :~/Desktop/work/tools/openlane_working_dir/openlane/configuration < design/runs/config.tcl < design/PDK.tcl
+```
 ### 🧬 Step 5: Run FloorPlan
 ```tcl
 run_floorplan
