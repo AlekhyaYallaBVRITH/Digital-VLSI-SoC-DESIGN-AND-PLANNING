@@ -535,3 +535,68 @@ echo $::env(SYNTH_DRIVING_CELL)
 ```tcl
 run_synthesis
 ```
+# To check the synthesized netlist 
+Open the netlist file generated after synthesis sky130_vsdinv in temp/merged.lef
+
+![Screenshot from 2025-04-02 20-15-58](https://github.com/user-attachments/assets/9a80bbfa-805d-40d4-8eff-50637547a116)
+To improve timing, adjust variables like SYNTH_SIZING (enables gate resizing), SYNTH_STRATEGY (sets optimization level), and SYNTH_BUFFERING (inserts buffers). Tweaking these helps meet timing goals.
+**Command to display current value of variable SYNTH_STRATEGY**
+echo $::env(SYNTH_STRATEGY)
+
+**Command to set new value for SYNTH_STRATEGY**
+set ::env(SYNTH_STRATEGY) "DELAY 3"
+
+**Command to display current value of variable SYNTH_BUFFERING to check whether it's enabled , if enabled =1**
+echo $::env(SYNTH_BUFFERING)
+
+**Command to display current value of variable SYNTH_SIZING, if enabled =1**
+echo $::env(SYNTH_SIZING)
+
+**Command to set new value for SYNTH_SIZING**
+set ::env(SYNTH_SIZING) 1
+
+**Command to display current value of variable SYNTH_DRIVING_CELL to check whether it's the proper cell or not**
+echo $::env(SYNTH_DRIVING_CELL)
+Next if we do run_synthesis to update all the changes made.
+next followed by run_floorplan
+## Step 6 : Timing Analysis with Ideal Clocks Using OpenSTA
+create pre_sta.conf to define the files to be loaded to the opensta for analysis in diffrent corners
+![Screenshot-27](https://github.com/user-attachments/assets/63f92396-7038-413f-b2ea-6f3855ecff15)
+create mybase.sdc file to define timimng contraints info for the sta tool. place it in designs/picorv32a/src and now run the opensta tool
+```tcl
+sta pre_sta.conf
+```
+** For Optimization**
+Reopen the openlane to implememt any changes
+
+docker
+
+./flow.tcl -interactive
+
+package require openlane 0.9
+
+prep -design picorv32a -tag 03-04_09-49 -overwrite
+
+# Adiitional commands to include custom lef to openlane flow
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+
+# Command to set new value for SYNTH_STRATEGY
+set ::env(SYNTH_STRATEGY) "DELAY 3" 
+
+# Command to set new value for SYNTH_SIZING
+set ::env(SYNTH_SIZING) 1
+
+# Command to set new value for SYNTH_MAX_FANOUT
+set ::env(SYNTH_MAX_FANOUT) 4
+
+# Now that the design is prepared and ready, we can run synthesis using following command
+run_synthesis
+
+** open new sta cmdline in new terminal**
+```tcl
+sta pre_sta.conf
+```
+**Eco implementation**
+Identify problematic cells from the design The oai cell seems to be driving 4 cells
+![Uploading 30139ce0-b8bc-48f9-aeb6-4f7c49e92cf1.jpg…]()
