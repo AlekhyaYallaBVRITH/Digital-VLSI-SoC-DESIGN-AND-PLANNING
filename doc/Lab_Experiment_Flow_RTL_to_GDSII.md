@@ -581,16 +581,16 @@ prep -design picorv32a -tag 03-04_09-49 -overwrite
 set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
 add_lefs -src $lefs
 
-# Command to set new value for SYNTH_STRATEGY
+**Command to set new value for SYNTH_STRATEGY**
 set ::env(SYNTH_STRATEGY) "DELAY 3" 
 
-# Command to set new value for SYNTH_SIZING
+**Command to set new value for SYNTH_SIZING**
 set ::env(SYNTH_SIZING) 1
 
-# Command to set new value for SYNTH_MAX_FANOUT
+**Command to set new value for SYNTH_MAX_FANOUT**
 set ::env(SYNTH_MAX_FANOUT) 4
 
-# Now that the design is prepared and ready, we can run synthesis using following command
+#Now that the design is prepared and ready, we can run synthesis using following command
 run_synthesis
 
 ** open new sta cmdline in new terminal**
@@ -598,5 +598,17 @@ run_synthesis
 sta pre_sta.conf
 ```
 **Eco implementation**
-Identify problematic cells from the design The oai cell seems to be driving 4 cells
-![Uploading 30139ce0-b8bc-48f9-aeb6-4f7c49e92cf1.jpg…]()
+Identify problematic cells from the design The oai cell seems to be driving 4 cells.
+![30139ce0-b8bc-48f9-aeb6-4f7c49e92cf1](https://github.com/user-attachments/assets/c0976f61-bd33-444d-9e8f-a69e6ad52601)
+**Report all connections to a specific net**
+report_net -connections _04373_
+
+**Check syntax for a command**
+help replace_cell
+
+**Replace a cell in the design**
+replace_cell _22324_ sky130_fd_sc_hd__o21ai_4
+
+**Generate a custom timing report with specific fields**
+report_checks -fields {net cap slew input_pins} -digits 4
+The slack improved from -4.62 to -4.58
