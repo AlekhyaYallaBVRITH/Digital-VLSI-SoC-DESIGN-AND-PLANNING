@@ -559,9 +559,11 @@ echo $::env(SYNTH_SIZING)
 set ::env(SYNTH_SIZING) 1
 
 **Command to display current value of variable SYNTH_DRIVING_CELL to check whether it's the proper cell or not**
+```tcl
 echo $::env(SYNTH_DRIVING_CELL)
 Next if we do run_synthesis to update all the changes made.
 next followed by run_floorplan
+```
 ---
 ## Step 6 : Timing Analysis with Ideal Clocks Using OpenSTA
 create pre_sta.conf to define the files to be loaded to the opensta for analysis in diffrent corners
