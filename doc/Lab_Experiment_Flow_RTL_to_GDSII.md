@@ -161,7 +161,7 @@ Area (in microns²) = (Width × Height) / (1000 × 1000)
 
 ---
 **In a seperate terminal enter the directory with def filE (results folder in recent run stage : floorplan)**
-```tcl
+```text
 magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
 ```
 ## 🧭 Magic GUI: Navigating and Inspecting the Layout
