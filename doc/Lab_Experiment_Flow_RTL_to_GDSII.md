@@ -159,7 +159,7 @@ Area (in microns²) = (Width × Height) / (1000 × 1000)
 - **Total Die Area** = `443,587.21 µm²`
 
 ---
-# In a seperate terminal enter the directory with def filE (results folder in recent run stage : floorplan)
+**In a seperate terminal enter the directory with def filE (results folder in recent run stage : floorplan)**
 ```tcl
 magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
 ```
@@ -202,12 +202,13 @@ run_placement
 ![11](https://github.com/user-attachments/assets/78b290f9-7ac4-4dd5-b45c-c9c1c8891c94)
 
 To check def file generated in magic
-# Open new terminal enter the directory with def file (results folder in recent run stage : placement)
+**Open new terminal enter the directory with def file (results folder in recent run stage : placement)**
 magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
 
 To view the def file
 ![12](https://github.com/user-attachments/assets/c8f2a88c-b96e-47ee-a3e6-d039180e6d0d)
 ---
+
 ### Day 3 Exercise
 
 ### 🧬 Step 5: Design library cell using Magic Layout and ngspice characterization
@@ -252,7 +253,7 @@ Load the custom inverter layout in magic and explore.
    ```tcl
    what
    ```
-# Creating a folder in magic for git clone
+**Creating a folder in magic for git clone**
 ![15](https://github.com/user-attachments/assets/668a1696-6643-49f5-ae6f-18866c2158a0)
 ### GUI in magic for Standard cell
 
