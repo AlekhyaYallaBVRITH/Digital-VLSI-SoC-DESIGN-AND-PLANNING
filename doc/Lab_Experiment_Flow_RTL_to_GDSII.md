@@ -440,9 +440,10 @@ cd drc_tests
 
 vi .magicrc                
 **Open the Magic configuration file in 'vi' editor**
-
+```tcl
 magic -d XR met3.mag &      
 **Launch Magic in the 'XR' display mode and open the 'met3.mag' layout file**
+```
 ---
 Create a bounding box (bbox) in the layout window using the left and right mouse buttons.  
 Select the desired layer by clicking it with the middle mouse button in the Layers panel.
