@@ -629,3 +629,128 @@ To check the timing through the modified cell.
 report_checks -from _35312_ -to _35239_ -through _22380_
 ```
 **report_checks -from _start_pont_net_id -to end_point_net_id -through cell_id**
+## Step 7 : Timing analysis with real clocks using openSTA
+OpenROAD is the core tool on which OpenLane is built. It includes a built-in STA engine that we will use to analyze timing.
+docker
+
+./flow.tcl -interactive
+
+package require openlane 0.9
+
+#to start with previous data without overwrite tag
+prep -design picorv32a -tag 03-04_09-49 
+# INit Openroad terminal inside openlane terminal
+openroad
+
+# Reading lef file
+read_lef /openLANE_flow/designs/picorv32a/runs/03-04_09-49 /tmp/merged.lef
+
+# Reading def file
+read_def /openLANE_flow/designs/picorv32a/runs/03-04_09-49/results/cts/picorv32a.cts.def
+
+**Creating an OpenROAD database to work with**
+write_db pico_cts.db
+
+**Loading the created database in OpenROAD**
+read_db pico_cts.db
+
+**Read netlist post CTS**
+read_verilog /openLANE_flow/designs/picorv32a/runs/03-04_09-49/results/synthesis/picorv32a.synthesis_cts.v
+
+**Read library for design**
+read_liberty $::env(LIB_SYNTH_COMPLETE)
+
+**Read in the custom sdc we created**
+read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
+
+**Setting all cloks as propagated clocks**
+set_propagated_clock [all_clocks]
+
+**Generating custom timing report**
+report_checks -path_delay min_max -fields {slew trans net cap input_pins} -format full_clock_expanded -digits 4
+
+**Exit to OpenLANE flow into openRoad**
+exit
+![Screenshot-19](https://github.com/user-attachments/assets/f38fd07a-9459-4e25-8edb-5f166489ccf6)
+Hold slack
+![Screenshot-18](https://github.com/user-attachments/assets/b39e0851-4c3b-4caf-8b9b-0a1bf50ac40c)
+Setup slack
+![Screenshot-17](https://github.com/user-attachments/assets/d4679add-8dc0-40e2-abd7-f59e23c794fb)
+After this,
+removing "sky130_fd_sc_hd__clkbuf_1'" from CTS_CLK_BUFFER_LIST and reruning the cts to see the results
+# Checking current value of 'CTS_CLK_BUFFER_LIST'
+echo $::env(CTS_CLK_BUFFER_LIST)
+
+# Removing 'sky130_fd_sc_hd__clkbuf_1' from the list
+set ::env(CTS_CLK_BUFFER_LIST) [lreplace $::env(CTS_CLK_BUFFER_LIST) 0 0]
+
+# Checking current value of 'CTS_CLK_BUFFER_LIST'
+echo $::env(CTS_CLK_BUFFER_LIST)
+
+# Setting def as placement def otherwise, we get clock not found error
+set ::env(CURRENT_DEF) /openLANE_flow/designs/picorv32a/runs/04-04_09-02//results/placement/picorv32a.placement.def
+
+# Run CTS again
+run_cts
+
+# Command to run OpenROAD tool
+openroad
+
+# Reading lef file
+read_lef /openLANE_flow/designs/picorv32a/runs/04-04_09-02//tmp/merged.lef
+
+# Reading def file
+read_def /openLANE_flow/designs/picorv32a/runs/04-04_09-02//results/cts/picorv32a.cts.def
+
+# Creating an OpenROAD database to work with
+write_db pico_cts.db
+
+# Loading the created database in OpenROAD
+read_db pico_cts.db
+
+# Read netlist post CTS
+read_verilog /openLANE_flow/designs/picorv32a/runs/04-04_09-02//results/synthesis/picorv32a.synthesis_cts.v
+
+# Read library for design
+read_liberty $::env(LIB_SYNTH_COMPLETE)
+
+# Read in the custom sdc we created
+read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
+
+# Setting all cloks as propagated clocks
+set_propagated_clock [all_clocks]
+
+# Generating custom timing report
+report_checks -path_delay min_max -fields {slew trans net cap input_pins} -format full_clock_expanded -digits 4
+
+# Report hold skew
+report_clock_skew -hold
+
+# Report setup skew
+report_clock_skew -setup
+
+# Exit to OpenLANE flow
+exit
+
+
+# Checking current value of 'CTS_CLK_BUFFER_LIST'
+echo $::env(CTS_CLK_BUFFER_LIST)
+
+# Inserting 'sky130_fd_sc_hd__clkbuf_1' to first index of list
+set ::env(CTS_CLK_BUFFER_LIST) [linsert $::env(CTS_CLK_BUFFER_LIST) 0 sky130_fd_sc_hd__clkbuf_1]
+
+# Checking current value of 'CTS_CLK_BUFFER_LIST'
+echo $::env(CTS_CLK_BUFFER_LIST)
+
+Before removal of "sky130_fd_sc_hd__clkbuf_1" values are
+| Slack Type | Value (ns) | Status  |
+|------------|------------|---------|
+| Hold       | 0.0637     | MET     |
+| Setup      | 4.5985     | MET     |
+
+After removing "sky130_fd_sc_hd__clkbuf_1" values are
+| Slack Type | Value (ns) | Status  |
+|------------|------------|---------|
+| Hold       | 0.2351     | MET     |
+| Setup      | 4.6943     | MET     |
+
