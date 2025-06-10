@@ -559,6 +559,7 @@ set ::env(SYNTH_SIZING) 1
 echo $::env(SYNTH_DRIVING_CELL)
 Next if we do run_synthesis to update all the changes made.
 next followed by run_floorplan
+---
 ## Step 6 : Timing Analysis with Ideal Clocks Using OpenSTA
 create pre_sta.conf to define the files to be loaded to the opensta for analysis in diffrent corners
 ![Screenshot-27](https://github.com/user-attachments/assets/63f92396-7038-413f-b2ea-6f3855ecff15)
@@ -612,3 +613,19 @@ replace_cell _22324_ sky130_fd_sc_hd__o21ai_4
 **Generate a custom timing report with specific fields**
 report_checks -fields {net cap slew input_pins} -digits 4
 The slack improved from -4.62 to -4.58
+
+Nand gate of strength 2 is driving three cells
+-changing drive stength to 3 returns the message "Warning: liberty cell 'sky130_fd_sc_hd__nand2_3' not found."
+-changing the drive strength to 4  the slack reduced to -4.5555 from -4.5886
+![Screenshot-21](https://github.com/user-attachments/assets/86af29bb-38a7-4896-abd8-6aa445e3b51c)
+The OAI cell with drive strength 2 shows higher delay. When you try changing the drive strength to 3, you get this warning:
+`Warning: liberty cell 'sky130_fd_sc_hd__o21bai_3' not found.`
+
+Changing the drive strength to 4 works without errors.
+![Screenshot-22](https://github.com/user-attachments/assets/0e91e8af-baca-4093-abb6-a84757aa9c77)
+The slack will be reduced from -4.5555 to -4.5060
+To check the timing through the modified cell.
+```tcl
+report_checks -from _35312_ -to _35239_ -through _22380_
+```
+**report_checks -from _start_pont_net_id -to end_point_net_id -through cell_id**
