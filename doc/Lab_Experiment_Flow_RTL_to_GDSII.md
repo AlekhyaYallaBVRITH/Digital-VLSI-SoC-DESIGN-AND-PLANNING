@@ -753,4 +753,73 @@ After removing "sky130_fd_sc_hd__clkbuf_1" values are
 |------------|------------|---------|
 | Hold       | 0.2351     | MET     |
 | Setup      | 4.6943     | MET     |
+### 🧬 Step 6: PWR Routing
+#step 6.1: Generation of pdn.def file
+
+**check which def file openlane is currently pointing at , it should be pointing to CTS def**
+echo $::env(CURRENT_DEF)
+
+**create PDN**
+gen_pdn
+![Screenshot-15](https://github.com/user-attachments/assets/f9514eca-2d4c-489f-a3ca-07b9bd9197fb)
+ To view the pdn file
+ 
+```tcl
+cd ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/04-04_09-02/tmp/floorplan
+
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../merged.lef def read 12-pdn.def &
+```
+#step 6.2: Routing 
+```tcl
+run_routing
+cd ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/04-04_09-02/results/routing/
+
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.def &
+```
+# step 6.3: To verify the results open the OpenRoad tool
+openroad
+```tcl
+# Reading lef file
+read_lef /openLANE_flow/designs/picorv32a/runs/04-04_09-02/tmp/merged.lef
+
+# Reading def file
+read_def /openLANE_flow/designs/picorv32a/runs/04-04_09-02/results/routing/picorv32a.def
+
+# Creating an OpenROAD database to work with
+write_db pico_route.db
+
+# Loading the created database in OpenROAD
+read_db pico_route.db
+
+# Read netlist post CTS
+read_verilog /openLANE_flow/designs/picorv32a/runs/04-04_09-02/results/synthesis/picorv32a.synthesis_preroute.v
+
+# Read library for design
+read_liberty $::env(LIB_SYNTH_COMPLETE)
+
+# Read in the custom sdc we created
+read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
+
+# Setting all cloks as propagated clocks
+set_propagated_clock [all_clocks]
+
+# Read SPEF
+read_spef /openLANE_flow/designs/picorv32a/runs/04-04_09-02/results/routing/picorv32a.spef
+
+# Generating custom timing report
+report_checks -path_delay min_max -fields {slew trans net cap input_pins} -format full_clock_expanded -digits 4
+
+# Exit to OpenLANE flow
+exit
+```
+Hold and Setup
+![day 5-2 (1)](https://github.com/user-attachments/assets/f3c7b440-0fb3-432e-ae5a-33314f7daf1e)
+
+![day 5-1 (1)](https://github.com/user-attachments/assets/d872ce77-c16f-4492-a579-5b1087f868b2)
+## Final Slack Values
+
+| Slack Type | Value (ns) | Status  |
+|------------|------------|---------|
+| Hold       | 0.1079     | MET     |
+| Setup      | 4.3674     | MET     |
 
